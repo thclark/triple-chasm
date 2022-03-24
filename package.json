@@ -1,7 +1,7 @@
 {
-  "name": "toms-frontend-case-study",
+  "name": "triple-chasm-widget-example",
   "version": "0.0.2",
-  "description": "Designed as a case study for junior-to-mid level frontend engineering applicants, to get a sense of their experience and skill level.",
+  "description": "To show what an embed widget might look like.",
   "keywords": [],
   "main": "index.js",
   "homepage": ".",
