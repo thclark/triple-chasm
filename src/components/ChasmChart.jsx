@@ -1,27 +1,8 @@
-import {
-  BarElement,
-  CategoryScale,
-  Chart as ChartJS,
-  Legend,
-  LineElement,
-  LinearScale,
-  PointElement,
-  Title,
-  Tooltip,
-} from 'chart.js'
+import { Chart as ChartJS, registerables } from 'chart.js'
 import React, { useEffect, useRef, useState } from 'react'
 import { Chart } from 'react-chartjs-2'
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-  PointElement,
-  LineElement
-)
+ChartJS.register(...registerables)
 
 function createGradient(ctx, area) {
   const colorStart = '#FE6B8B'
