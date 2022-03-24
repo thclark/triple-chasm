@@ -56,7 +56,7 @@ const TripleInfo = ({ children, ...rest }) => {
       </Box>
       <Box>
         <Typography gutterBottom variant="h2">
-          Areas of improvement
+          Areas of Improvement
         </Typography>
         <Chip
           icon={<AttachMoneyIcon />}
