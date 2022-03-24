@@ -3,7 +3,7 @@ import React from 'react'
 import Box from '@mui/material/Box'
 import { styled } from '@mui/system'
 
-const Svg = styled('svg')()
+const Svg = styled('svg')({})
 
 const JaggedSvg = () => (
   <Svg

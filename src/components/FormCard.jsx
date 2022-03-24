@@ -1,8 +1,8 @@
-import React, { useEffect, useCallback } from 'react'
-import Card from '@mui/material/Card'
-import Box from '@mui/material/Box'
-import CircularProgress from '@mui/material/CircularProgress'
+import React, { useCallback, useEffect } from 'react'
 
+import Box from '@mui/material/Box'
+import Card from '@mui/material/Card'
+import CircularProgress from '@mui/material/CircularProgress'
 import Zoom from '@mui/material/Zoom'
 
 function FormCard({ children, submitting }) {
@@ -21,8 +21,7 @@ function FormCard({ children, submitting }) {
     <Card
       id="card"
       sx={{
-        width: '90%',
-        maxWidth: '350px',
+        // width: '90%',
         alignContent: 'center',
         overflow: 'visible',
         boxSizing: 'border-box',

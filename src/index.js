@@ -7,11 +7,11 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider } from '@mui/material/styles'
 
 import BackgroundContainer from './components/BackgroundContainer'
+import ChasmChart from './components/ChasmChart'
 import ErrorStrip from './components/ErrorStrip'
 import FormCard from './components/FormCard'
-import MessageField from './components/MessageField'
-import SendItButton from './components/SendItButton'
 import SuccessSnackbar from './components/SuccessSnackbar'
+import TripleInfo from './components/TripleInfo'
 import useApi from './hooks/useApi'
 import theme from './theme'
 
@@ -77,11 +77,25 @@ function App() {
             justifyContent: 'center',
           }}
         >
-          <FormCard submitting={submitting}>
-            <form onSubmit={handleSubmit(post)}>
-              <MessageField control={control} />
-              <SendItButton type="submit">Send It!</SendItButton>
-            </form>
+          <FormCard submitting={false}>
+            <Box
+              sx={{
+                display: 'flex',
+              }}
+            >
+              <Box
+                mr={3}
+                ml={-1}
+                sx={{
+                  pl: 3,
+                }}
+              >
+                <ChasmChart />
+              </Box>
+              <Box sx={{ marginRight: 2 }}>
+                <TripleInfo />
+              </Box>
+            </Box>
           </FormCard>
         </Box>
         <ErrorStrip message={nonFieldErrors} />

@@ -11,8 +11,11 @@
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "axios": "latest",
+    "chart.js": "^3.7.1",
     "eslint-config-prettier": "^8.5.0",
+    "faker": "^6.6.6",
     "react": "latest",
+    "react-chartjs-2": "^4.0.1",
     "react-dom": "latest",
     "react-hook-form": "latest"
   },
