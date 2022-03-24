@@ -11,7 +11,7 @@ const useApi = ({ onSuccess }) => {
       axios
         .post(
           'https://europe-west1-octue-amy.cloudfunctions.net/frontend-developer-case-study',
-          data,
+          data
         )
         .then(function (response) {
           setApiErrors({})
@@ -27,7 +27,7 @@ const useApi = ({ onSuccess }) => {
           setsubmitting(false)
         })
     },
-    [onSuccess, setsubmitting, setApiErrors],
+    [onSuccess, setsubmitting, setApiErrors]
   )
 
   const resetApiErrors = useCallback(() => {

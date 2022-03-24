@@ -1,21 +1,19 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
-import CssBaseline from '@mui/material/CssBaseline'
+import { useForm } from 'react-hook-form'
+
 import Box from '@mui/material/Box'
-
-import BackgroundContainer from './components/BackgroundContainer'
-import FormCard from './components/FormCard'
-import ErrorStrip from './components/ErrorStrip'
-import useApi from './hooks/useApi'
-import SendItButton from './components/SendItButton'
-import MessageField from './components/MessageField'
-import SuccessSnackbar from './components/SuccessSnackbar'
-
+import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider } from '@mui/material/styles'
 
+import BackgroundContainer from './components/BackgroundContainer'
+import ErrorStrip from './components/ErrorStrip'
+import FormCard from './components/FormCard'
+import MessageField from './components/MessageField'
+import SendItButton from './components/SendItButton'
+import SuccessSnackbar from './components/SuccessSnackbar'
+import useApi from './hooks/useApi'
 import theme from './theme'
-
-import { useForm } from 'react-hook-form'
 
 function App() {
   // Handle the open/clsed state of the success notice
@@ -24,14 +22,7 @@ function App() {
   const closeSnackbar = useCallback(() => setSnackbar(false), [setSnackbar])
 
   // Get form state and controllers
-  const {
-    control,
-    handleSubmit,
-    setError,
-    watch,
-    reset,
-    formState: { isDirty, isTouched },
-  } = useForm({
+  const { control, handleSubmit, setError, watch, reset } = useForm({
     defaultValues: {
       message: '',
     },
@@ -39,7 +30,8 @@ function App() {
 
   // On success, reset the form and show a snackbar
   const handleSuccess = useCallback(() => {
-    reset(), openSnackbar()
+    reset()
+    openSnackbar()
   }, [reset, openSnackbar])
 
   // Use a hook to wrap up interaction with the API
@@ -61,7 +53,7 @@ function App() {
   // Update api field errors onto the form state
   useEffect(() => {
     Object.keys(fieldErrors).forEach((key) =>
-      setError(key, { type: 'api', message: fieldErrors[key] }),
+      setError(key, { type: 'api', message: fieldErrors[key] })
     )
   }, [fieldErrors, setError])
 

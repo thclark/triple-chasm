@@ -35,5 +35,70 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:flowtype/recommended",
+      "prettier"
+    ],
+    "globals": {
+      "window": true,
+      "document": true,
+      "navigator": true,
+      "require": true
+    },
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "requireConfigFile": false,
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "babelOptions": {
+        "presets": [
+          "@babel/preset-react"
+        ]
+      }
+    },
+    "plugins": [
+      "flowtype",
+      "import",
+      "jsx-a11y",
+      "react",
+      "react-hooks"
+    ],
+    "settings": {
+      "react": {
+        "pragma": "React",
+        "version": "detect"
+      }
+    },
+    "overrides": [
+      {
+        "files": [
+          "src/**/*.stories.j*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ],
+    "rules": {
+      "react/prop-types": 0
+    }
+  },
+  "eslintIgnore": [
+    "!/.storybook"
+  ],
+  "importSort": {
+    ".js, .jsx, .es6, .es": {
+      "parser": "babylon",
+      "style": "module-scoped",
+      "options": {}
+    }
   }
 }
