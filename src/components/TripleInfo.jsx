@@ -19,7 +19,7 @@ const TripleInfo = ({ children, ...rest }) => {
       <Box sx={{ textAlign: 'justify', marginBottom: 2.5 }}>
         <Typography variant="body1">
           Triple Chasm is tracking Octue against large cohorts of similar
-          companies. Thousands of collective years of experience are distiled
+          companies. Thousands of collective years of experience are distilled
           into helping Octue cross the next chasm...
         </Typography>
       </Box>
