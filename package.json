@@ -11,6 +11,7 @@
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "axios": "latest",
+    "eslint-config-prettier": "^8.5.0",
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "latest"
