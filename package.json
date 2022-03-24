@@ -3,8 +3,8 @@
   "version": "0.0.2",
   "description": "Designed as a case study for junior-to-mid level frontend engineering applicants, to get a sense of their experience and skill level.",
   "keywords": [],
-  "homepage": "https://codesandbox.io/s/4j7m47vlm4",
   "main": "index.js",
+  "homepage": "https://thclark.github.io/triple-chasm-example-widget",
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
@@ -16,12 +16,24 @@
     "react-hook-form": "latest"
   },
   "devDependencies": {
-    "react-scripts": "1.0.0"
+    "react-scripts": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

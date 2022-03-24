@@ -1,0 +1,47 @@
+exclude: 'build|node_modules|.git|((?:[^/]*/)*)(.svg)|((?:[^/]*/)*)(.xml)'
+default_stages: [commit]
+fail_fast: true
+default_language_version:
+  python: python3
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.1.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-added-large-files
+        args: ['--maxkb=10240']
+
+  - repo: https://github.com/windpioneers/pre-commit-hooks
+    rev: 0.0.5
+    hooks:
+      - id: check-branch-name
+        args:
+          - '^main$'
+          - '^([a-z][#a-z0-9]*)(-[#a-z0-9]+)*$'
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: 'v2.2.1'
+    hooks:
+      - id: prettier
+
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v7.32.0
+    hooks:
+      - id: eslint
+        files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
+        types: [file]
+        args: ['--fix']
+        additional_dependencies:
+          - eslint@^7.32.0
+          - eslint-config-prettier@^8.3.0
+          - prettier@^2.2.1
+          - gatsby@^4.2.0 # Requires the various eslint plugin dependencies
+
+  - repo: https://github.com/octue/pre-commit-hooks
+    rev: 0.5.0
+    hooks:
+      - id: check-commit-message-is-conventional
+        stages: [commit-msg]
