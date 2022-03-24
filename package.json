@@ -4,7 +4,7 @@
   "description": "Designed as a case study for junior-to-mid level frontend engineering applicants, to get a sense of their experience and skill level.",
   "keywords": [],
   "main": "index.js",
-  "homepage": "https://thclark.github.io/triple-chasm-example-widget",
+  "homepage": ".",
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
